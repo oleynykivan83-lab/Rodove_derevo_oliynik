@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Родина ОЛІЙНИК - Родове дерево</title>
+    <link rel="icon" type="image/webp" href="Фото/Oliynik-Family-Tree.webp" />
+    <meta
+      name="description"
+      content="Сімейна сторінка зі спогадами, традиціями та планами на майбутнє."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="access-gate open" id="access-gate" aria-live="polite">
+      <form class="access-card" id="access-form" autocomplete="off">
+        <h2>Вхід на сайт</h2>
+        <p>Введіть нік і пароль для доступу до родинної сторінки.</p>
+        <label for="access-nick">Нік</label>
+        <input id="access-nick" name="nick" type="text" required />
+        <label for="access-password">Пароль</label>
+        <input id="access-password" name="password" type="password" required />
+        <button type="submit">Увійти</button>
+        <p class="access-error" id="access-error"></p>
+      </form>
+    </div>
+
+    <div class="site-shell locked" id="site-shell">
+      <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+      <nav class="nav wrap">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+          Меню
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="#story">Родове дерево</a></li>
+          <li><a href="#family">Родинні фото та відео</a></li>
+          <li><a href="#traditions">Традиції</a></li>
+          <li><a href="#future">Майбутнє</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content wrap">
+        <h1 class="headline reveal">
+          Наш дім починається<br />
+          не зі стін, а з людей,<br />
+          які поруч...
+        </h1>
+        <h2 class="headline-secondary reveal">Родове дерево родини "ОЛІЙНИК"</h2>
+      </div>
+
+      <div class="hero-orb orb-a" aria-hidden="true"></div>
+      <div class="hero-orb orb-b" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="story wrap" id="story">
+        <div class="section-title reveal">
+          <h2><a href="#top" class="section-self-link">Родове дерево</a></h2>
+        </div>
+        <div id="tree-container" class="tree-wrap reveal"></div>
+      </section>
+
+      <section class="family wrap" id="family">
+        <div class="section-title reveal">
+          <h2><a href="#top" class="section-self-link">Родинні фото та відео</a></h2>
+        </div>
+
+        <div class="person-grid" id="person-grid"></div>
+      </section>
+
+      <section class="traditions wrap" id="traditions">
+        <div class="section-title reveal">
+          <h2><a href="#top" class="section-self-link">Традиції</a></h2>
+        </div>
+        <ul class="timeline">
+          <li class="reveal">
+            <strong>Січень:</strong> плануємо рік і обираємо одну велику сімейну
+            мрію.
+          </li>
+          <li class="reveal">
+            <strong>Весна:</strong> садимо щось нове на згадку про важливі події.
+          </li>
+          <li class="reveal">
+            <strong>Літо:</strong> один день повністю без телефонів, тільки
+            розмови та прогулянки.
+          </li>
+          <li class="reveal">
+            <strong>Грудень:</strong> дякуємо одне одному за рік у листах, які
+            читаємо за столом.
+          </li>
+        </ul>
+      </section>
+
+      <section class="future" id="future">
+        <div class="wrap future-box reveal">
+          <h2><a href="#top" class="section-self-link section-self-link-light">Майбутнє</a></h2>
+          <p>Нові історії вже в дорозі</p>
+          <p>
+            Найкраще попереду. І воно точно буде нашим, бо ми вміємо бути
+            поруч.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p>Зроблено з любов'ю для родини.</p>
+      <p id="year"></p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Попереднє фото">&#10094;</button>
+      <img class="lightbox-image" id="lightbox-image" alt="Фото на весь екран" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Наступне фото">&#10095;</button>
+      <button class="lightbox-close" id="lightbox-close" aria-label="Закрити перегляд">Закрити</button>
+    </div>
+    </div>
+
+    <script src="family-tree.js"></script>
+    <script src="photo-manifest.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
